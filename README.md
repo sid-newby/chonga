@@ -1,7 +1,7 @@
 # Chonga Media Converter
 ![getchinga](<chonga.png>)
 
-Chonga is a command-line tool for converting video files to the space-efficient WebM format using the VP9 codec. It provides a user-friendly terminal interface with a progress bar to monitor the conversion process.
+Chonga is a command-line tool for converting video files to the space-efficient WebM format using the VP9 codec. It provides a user-friendly terminal interface with a progress bar to monitor the conversion process. It deletes the audio track. usually 90% file savings focused on video quality preservation. 
 
 ## Features
 
