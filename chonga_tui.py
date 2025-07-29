@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Chaotic Mexican-American punk TUI: convert a “changa” (MP4) into a tiny “chinga” (WebM)
-with sombreros, tacos, enchiladas, rich progress bars, and total mayhem.
+Yo Changa, Es a Chinga? 
 """
 
 import argparse
@@ -50,7 +49,7 @@ def convert(input_path: str, output_path: str, bitrate: str):
         TimeRemainingColumn(),
         console=console,
     ) as progress:
-        task_id = progress.add_task("🔥 Chinga in progress...", total=duration)
+        task_id = progress.add_task("🔥 Chingaderas in progress...", total=duration)
         # ffmpeg -progress pipe:1 prints key=value lines to stdout
         cmd = [
             "ffmpeg", "-hide_banner", "-loglevel", "error",
