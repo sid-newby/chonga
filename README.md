@@ -9,11 +9,13 @@ Chonga is a command-line tool for converting video files to the space-efficient 
 -   Uses `ffmpeg` for robust and high-quality encoding.
 -   Displays a progress bar with time remaining.
 -   Customizable bitrate for output files.
+ 
+
 
 ## Requirements
 
 -   Python 3
--   FFmpeg
+-   FFmpeg 
 
 You can install FFmpeg on macOS using Homebrew:
 
