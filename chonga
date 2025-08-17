@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# mp4-to-webm.sh
+# Converts MP4 → WebM, drops audio, uses high-quality VP9.
+#
+# Usage: ./mp4-to-webm.sh video1.mp4 video2.mp4 ...
+
+# Ensure ffmpeg is available
+if ! command -v ffmpeg &> /dev/null; then
+  echo "Error: ffmpeg not found. Install with: brew install ffmpeg"
+  exit 1
+fi
+
+# Loop through all input files
+for src in "$@"; do
+  # Derive output filename
+  dst="${src%.*}.webm"
+  echo "Converting '$src' → '$dst'..."
+
+  # Convert: drop audio (-an), encode with VP9 CRF=30 (tweak as desired)
+  ffmpeg -i "$src" \
+    -an \
+    -c:v libvpx-vp9 \
+    -crf 30 \
+    -b:v 0 \
+    -movflags +faststart \
+    "$dst"
+done
+
+echo "All conversions complete."

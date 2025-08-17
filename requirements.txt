@@ -1,0 +1,6 @@
+ffmpeg
+markdown-it-py
+mdurl
+Pygments
+rich
+textual
